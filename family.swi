@@ -3,6 +3,8 @@
   Ryosuke Takata
 */
 
+%%% object %%%
+
 parent(pan, bob).
 parent(tom, bob).
 parent(tom, liz).
@@ -17,6 +19,8 @@ female(liz).
 female(pat).
 female(ann).
 male(jim).
+
+%%% relation %%%
 
 offspring(X, Y) :- parent(Y, X).
 
