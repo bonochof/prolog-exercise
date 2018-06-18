@@ -1,0 +1,12 @@
+/*
+  family.swi
+  Ryosuke Takata
+*/
+
+parent(pan, bob).
+parent(tom, bob).
+parent(tom, liz).
+parent(bob, ann).
+parent(bob, pat).
+parent(pat, jim).
+
