@@ -22,3 +22,7 @@ offspring(X, Y) :- parent(Y, X).
 
 mother(X) :- parent(X, Y), female(X).
 
+grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
+
+syster(X, Y) :- parent(Z, X), parent(Z, Y), female(X).
+
