@@ -10,3 +10,5 @@ parent(bob, ann).
 parent(bob, pat).
 parent(pat, jim).
 
+offspring(X, Y) :- parent(Y, X).
+
