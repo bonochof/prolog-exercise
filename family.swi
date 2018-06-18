@@ -10,5 +10,15 @@ parent(bob, ann).
 parent(bob, pat).
 parent(pat, jim).
 
+female(pan).
+male(tom).
+male(bob).
+female(liz).
+female(pat).
+female(ann).
+male(jim).
+
 offspring(X, Y) :- parent(Y, X).
+
+mother(X) :- parent(X, Y), female(X).
 
