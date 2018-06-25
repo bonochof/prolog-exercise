@@ -81,3 +81,6 @@ vertical(seg(point(X, Y1), point(X, Y2))).
 % inference horizontal
 horizontal(seg(point(X1, Y), point(X2, Y))).
 
+% inference horizontal base
+regular(point(X1, Y1), point(X2, Y1), point(X2, Y2), point(X1, Y2)).
+
