@@ -10,69 +10,19 @@ point(1, 5).
 point(3, 3).
 point(4, 4).
 
-/*
-線分
-
-|
-|
-| *
-|
-|*
-+-----
-
-*/
+% define line segment
 seg(point(X1, Y1), point(X2, Y2)).
 
-/*
-三角形
-
-|
-|   *
-|
-|
-|*  *
-+-----
-
-*/
+% define triangle
 triangle(point(X1, Y1), point(X2, Y2), point(X3, Y3)).
 
-/*
-長方形
-
-|*  *
-|  
-|
-|
-|*  *
-+-----
-
-*/
+% define rectangle
 rectangle(point(X, Y), Width, Height, Angle).
 
-/*
-正方形
-
-|
-|*  *
-|
-|
-|*  *
-+-----
-
-*/
+% define square
 square(point(X, Y), Length, Angle).
 
-/*
-円
-
-|
-|
-|  *
-|
-|
-+-----
-
-*/
+% define circle
 circle(point(X, Y), R).
 
 % inference vertical
