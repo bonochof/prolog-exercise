@@ -75,3 +75,5 @@ square(point(X, Y), Length, Angle).
 */
 circle(point(X, Y), R).
 
+% inference vertical
+vertical(seg(point(X, Y1), point(X, Y2)).
