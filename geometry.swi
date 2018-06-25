@@ -1,0 +1,77 @@
+/*
+  geometry.swi
+  Ryosuke Takata
+*/
+
+%%% object %%%
+
+point(1, 1).
+point(1, 5).
+point(3, 3).
+point(4, 4).
+
+/*
+線分
+
+|
+|
+| *
+|
+|*
++-----
+
+*/
+seg(point(X1, Y1), point(X2, Y2)).
+
+/*
+三角形
+
+|
+|   *
+|
+|
+|*  *
++-----
+
+*/
+triangle(point(X1, Y1), point(X2, Y2), point(X3, Y3)).
+
+/*
+長方形
+
+|*  *
+|  
+|
+|
+|*  *
++-----
+
+*/
+rectangle(point(X, Y), Width, Height, Angle).
+
+/*
+正方形
+
+|
+|*  *
+|
+|
+|*  *
++-----
+
+*/
+square(point(X, Y), Length, Angle).
+
+/*
+円
+
+|
+|
+|  *
+|
+|
++-----
+
+*/
+circle(point(X, Y), R).
+
