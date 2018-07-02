@@ -1,5 +1,5 @@
 /*
-  geometry.swi
+  geometry.pl
   Ryosuke Takata
 */
 

@@ -1,5 +1,5 @@
 /*
-  member.swi
+  member.pl
   Ryosuke Takata
 */
 

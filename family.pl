@@ -1,5 +1,5 @@
 /*
-  family.swi
+  family.pl
   Ryosuke Takata
 */
 

@@ -1,5 +1,5 @@
 /*
-  conc.swi
+  conc.pl
   Ryosuke Takata
 */
 
