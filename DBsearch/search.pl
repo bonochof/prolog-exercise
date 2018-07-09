@@ -16,3 +16,15 @@ exists(X) :- husband(X).
 exists(X) :- wife(X).
 exists(X) :- child(X).
 
+someoffice(X) :-
+  family(
+    person(_, X, _, works(Office, _)),
+    person(_, X, _, works(Office, _)),
+    _).
+
+morethan3children(X) :-
+  family(
+    person(_, X, _, _),
+    _,
+    [_, _, _|_]).
+
