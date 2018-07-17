@@ -13,6 +13,7 @@ length([H|T], N) :-
   length(T, N1),
   N is 1 + N1.
 
+%%% Report Predict %%%
 % ex) halflist([a, b, c, d, e], [a, b], [c, d, e]). -> yes
 halflist(L1, L2, L3) :-
   conc(L2, L3, L1).
