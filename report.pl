@@ -16,10 +16,16 @@ length([H|T], N) :-
 */
 
 %%% Report Predict %%%
-% ex) halflist([a, b, c, d, e], [a, b], [c, d, e]). -> yes
+% (1) halflist([a, b, c, d, e], [a, b], [c, d, e]). -> yes
 halflist(L1, L2, L3) :-
   conc(L2, L3, L1),
   length(L2, N2),
   length(L3, N3),
   (N3 is N2; N3 is N2 + 1).
 
+% (2) del(a, [a, b, a], [a, b]). -> yes
+%     del(a, [a, b, a], [b, a]). -> yes
+del(X, L, L1) :-
+  conc([X], L1, L);
+  conc(L1, [X], L).
+  
