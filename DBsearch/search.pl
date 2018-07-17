@@ -28,3 +28,10 @@ morethan3children(X) :-
     _,
     [_, _, _|_]).
 
+richwife(X) :-
+  family(
+    person(_, X, _, works(_, Sarary1)),
+    person(_, X, _, works(_, Sarary2)),
+    _),
+  Sarary1 < Sarary2.
+
