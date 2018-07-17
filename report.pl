@@ -29,3 +29,10 @@ del(X, L, L1) :-
   conc([X], L1, L);
   conc(L1, [X], L).
   
+% (3) flatten([[a], b, [], [c, [d]]], [a, b, c, d]). -> yes
+flatten(L, Flatlist).
+
+% (4) rotate_right([a, b, c, d], [d, a, b, c]). -> yes
+rotate_right(L1, [L2Head| L2Tail]) :-
+  conc(L2Tail, [L2Head], L1).
+  
