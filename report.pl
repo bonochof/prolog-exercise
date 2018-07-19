@@ -27,10 +27,10 @@ halflist(L1, L2, L3) :-
 % (2) del(X, L, L1).
 %     ex) del(a, [a, b, a], [a, b]). -> yes
 %         del(a, [a, b, a], [b, a]). -> yes
-del(X, L, L1) :-
-  conc([X], L1, L);
-  conc(L1, [X], L).
-  
+del(H, [H|T], T).
+del(X, [H|T], [H|Ans]) :-
+  del(X, T, Ans).
+ 
 % (3) flatten(L, Flatlist).
 %     ex) flatten([[a], b, [], [c, [d]]], [a, b, c, d]). -> yes
 flatten(L, Flatlist).
