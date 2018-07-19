@@ -51,6 +51,9 @@ rotate_right(L1, [L2Head| L2Tail]) :-
 %         insert(new, [a, b, c], [a, new, b, c]). -> yes
 %         insert(new, [a, b, c], [a, b, new, c]). -> yes
 %         insert(new, [a, b, c], [a, b, c, new]). -> yes
+insert(X, L, [X|L]).
+insert(X, [H|T], [H|L]) :-
+  insert(X, T, L).
 
 % (6) sublist(L1, L2).
 %     ex) sublist([a, b, c, d], [b, c]). -> yes
