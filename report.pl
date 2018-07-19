@@ -33,7 +33,13 @@ del(X, [H|T], [H|Ans]) :-
  
 % (3) flatten(L, Flatlist).
 %     ex) flatten([[a], b, [], [c, [d]]], [a, b, c, d]). -> yes
-flatten(L, Flatlist).
+flatten([H|T], Flatlist) :-
+  flatten(H, AnsH),
+  flatten(T, AnsT),
+  conc(AnsH, AnsT, Flatlist),
+  !.
+flatten([], []).
+flatten(X, [X]).
 
 % (4) rotate_right(L1, L2).
 %     ex) rotate_right([a, b, c, d], [d, a, b, c]). -> yes
