@@ -128,7 +128,7 @@ kaibun(List) :-
 
 % (13) assoc-pro(Key, Alist, Result).
 %      ex) assoc-pro(b, [[a, x], [b, y], [c, z]], [b, y]). -> yes
-assoc-pro(Key, [[Key|KeyT]|T], [Key|KeyT]).
+assoc-pro(Key, [[Key|T]|_], [Key|T]).
 assoc-pro(Key, [_|T], Result) :-
   assoc-pro(Key, T, Result).
 
