@@ -92,6 +92,10 @@ subset([H|T1], L) :- subset(T1, L).
 
 % (8) reverse(L1, L2).
 %     ex) reverse([a, b, c, d], [d, c, b, a]). -> yes
+reverse([], []).
+reverse([H|T], L) :-
+  reverse(T, RvsT),
+  conc(RvsT, [H], L).
 
 % (9) max-num(L1, N).
 %     ex) max-num([4, 5, 2, 1], 5). -> yes
