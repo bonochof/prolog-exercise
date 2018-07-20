@@ -122,6 +122,9 @@ list-ave(L1, N) :-
 % (12) kaibun(List).
 %      ex) kaibun([a, b, c]). -> no
 %          kaibun([ta, ke, ya, bu, ya, ke, ta]). -> yes
+kaibun(List) :-
+  reverse(List, RvsList),
+  List = RvsList.
 
 % (13) assoc-pro(Key, Alist, Result).
 %      ex) assoc-pro(b, [[a, x], [b, y], [c, z]], [b, y]). -> yes
