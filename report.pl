@@ -99,6 +99,11 @@ reverse([H|T], L) :-
 
 % (9) max-num(L1, N).
 %     ex) max-num([4, 5, 2, 1], 5). -> yes
+max-num([X], X).
+max-num([H|T], N) :-
+  max-num(T, MaxT),
+  ((H > MaxT, N is H);
+  (H =< MaxT, N is MaxT)).
 
 % (10) total-num(L1, N).
 %      ex) total-num([4, 5, 2, 1], 12). -> yes
