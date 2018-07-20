@@ -114,6 +114,10 @@ total-num([H|T], N) :-
 
 % (11) list-ave(L1, N).
 %      ex) list-ave([1, 4, 4], 3). -> yes
+list-ave(L1, N) :-
+  total-num(L1, Sum),
+  length(L1, Len),
+  N is Sum / Len.
 
 % (12) kaibun(List).
 %      ex) kaibun([a, b, c]). -> no
