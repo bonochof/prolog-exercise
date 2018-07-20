@@ -59,10 +59,36 @@ insert(X, [H|T], [H|L]) :-
 %     ex) sublist([a, b, c, d], [b, c]). -> yes
 %         sublist([a, b, c, d], []). -> yes
 %         sublist([a, b, c, d], [b, d]). -> no
+sublist(_, []).
+sublist([H1|T1], [H2|T2]) :-
+  H1 = H2,
+  conc([H2|T2], _, [H1|T1]),
+  sublist(T1, T2);
+  sublist(T1, [H2|T2]).
+
+/*
+sublist([H|T], L) :-
+  subsublist([H|T], L);
+  sublist(T, L).
+subsublist(_, []).
+subsublist([H|T1], [H|T2]) :-
+  subsublist(T1, T2).
+*/
 
 % (7) subset(Set, Subset).
 %     ex) subset([a, b, c], S).
 %         -> S=[a,b,c]; [b,c]; [a,c]; [a,b]; [a]; [b]; [c]; []
+sublist(_, []).
+sublist([H1|T1], [H2|T2]) :-
+  H1 = H2,
+  sublist(T1, T2);
+  sublist(T1, [H2|T2]).
+
+/*
+subset(_, []).
+subset([H|T1], [H|T2]) :- subset(T1, T2).
+subset([H|T1], L) :- subset(T1, L).
+*/
 
 % (8) reverse(L1, L2).
 %     ex) reverse([a, b, c, d], [d, c, b, a]). -> yes
