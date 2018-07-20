@@ -137,4 +137,8 @@ assoc-pro(Key, [_|T], Result) :-
 means(dog, inu).
 means(cat, neko).
 means(monkey, saru).
+translate([], []).
+translate([H1|T1], [H2|T2]) :-
+  translate(T1, T2),
+  means(H1, H2).
 
