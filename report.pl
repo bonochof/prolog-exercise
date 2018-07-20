@@ -128,6 +128,8 @@ kaibun(List) :-
 
 % (13) assoc-pro(Key, Alist, Result).
 %      ex) assoc-pro(b, [[a, x], [b, y], [c, z]], [b, y]). -> yes
+assoc-pro(Key, [[Key|KeyT]|T], [Key|KeyT]).
+assoc-pro(Key, [_|T], Result) :- assoc-pro(Key, T, Result).
 
 % (14) translate(L1, L2).
 %      ex) translate([dog, cat, monkey], [inu, neko, saru]). -> yes
