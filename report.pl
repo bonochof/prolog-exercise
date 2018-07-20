@@ -107,6 +107,10 @@ max-num([H|T], N) :-
 
 % (10) total-num(L1, N).
 %      ex) total-num([4, 5, 2, 1], 12). -> yes
+total-num([X], X).
+total-num([H|T], N) :-
+  total-num(T, SumT),
+  N is SumT + H.
 
 % (11) list-ave(L1, N).
 %      ex) list-ave([1, 4, 4], 3). -> yes
