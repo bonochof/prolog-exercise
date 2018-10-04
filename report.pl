@@ -78,11 +78,11 @@ subsublist([H|T1], [H|T2]) :-
 % (7) subset(Set, Subset).
 %     ex) subset([a, b, c], S).
 %         -> S=[a,b,c]; [b,c]; [a,c]; [a,b]; [a]; [b]; [c]; []
-sublist(_, []).
-sublist([H1|T1], [H2|T2]) :-
+subset(_, []).
+subset([H1|T1], [H2|T2]) :-
   H1 = H2,
-  sublist(T1, T2);
-  sublist(T1, [H2|T2]).
+  subset(T1, T2);
+  subset(T1, [H2|T2]).
 
 /*
 subset(_, []).
